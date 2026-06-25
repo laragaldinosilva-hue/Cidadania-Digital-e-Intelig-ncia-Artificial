@@ -132,3 +132,12 @@ footer{
     }
 
 }
+:root{
+    --roxo-escuro:#4c1d95;
+    --roxo:#7c3aed;
+    --lilas:#a855f7;
+    --rosa-lilas:#c084fc;
+    --claro:#f5f3ff;
+    --branco:#ffffff;
+    --texto:#1f2937;
+}
