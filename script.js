@@ -1,4 +1,4 @@
-// Banco de dados do Quiz
+// Banco de dados de perguntas do Quiz (Subcategoria A e D)
 const perguntas = [
     {
         texto: "As Deepfakes são sempre fáceis de identificar visualmente?",
@@ -37,7 +37,7 @@ const perguntas = [
 let pontos = 0;
 let perguntaAtual = 0;
 
-// Função para renderizar a pergunta na tela
+// Função que renderiza e atualiza o estado do Quiz no DOM
 function carregarPergunta() {
     if (perguntaAtual >= perguntas.length) {
         document.getElementById("pergunta-texto").textContent = "🏆 Quiz Concluído!";
@@ -70,7 +70,7 @@ function carregarPergunta() {
     };
 }
 
-// Função executada ao clicar em uma opção
+// Validador de respostas do Quiz
 function verificarResposta(correta) {
     const resultado = document.getElementById("resultado");
 
@@ -89,11 +89,18 @@ function verificarResposta(correta) {
     setTimeout(carregarPergunta, 1500);
 }
 
-// Inicializa o quiz
+// Inicialização do Quiz
 carregarPergunta();
 
-// Modo escuro
+// Controle do Botão de Acessibilidade (Modo Escuro)
 const temaBtn = document.getElementById("temaBtn");
 temaBtn.addEventListener("click", function(){
     document.body.classList.toggle("dark");
+});
+
+// Interação com o Formulário de Ajuda
+const ajudaForm = document.getElementById("ajudaForm");
+ajudaForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("respostaAjuda").textContent = "🔍 Análise solicitada! Lembre-se: antes de compartilhar, pesquise o texto em sites de checagem de fatos.";
 });
