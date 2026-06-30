@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Conscientização Digital</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -25,7 +25,7 @@
 
     <main>
         <section id="introducao" class="secao">
-            <h2>Bem-vindo ao Portal</h2>
+            <h2>Bien-vindo ao Portal</h2>
             <p>
                 Vivemos em uma época em que a tecnologia está presente em praticamente
                 todos os momentos do nosso dia. A Inteligência Artificial tem
@@ -49,7 +49,7 @@
         </section>
 
         <section id="deepfakes" class="secao">
-            <h2> O que são Deepfakes?</h2>
+            <h2>🤖 O que são Deepfakes?</h2>
             <p>
                 O termo "deepfake" é a combinação das palavras "deep learning" e "fake".
                 Trata-se de uma tecnologia baseada em Inteligência Artificial capaz de criar
@@ -102,8 +102,7 @@
         </section>
 
         <section id="quiz" class="secao">
-            <h2> Quiz Digital</h2>
-            
+            <h2>🎮 Quiz Digital</h2>
             <p id="pergunta-texto">Carregando pergunta...</p>
             
             <div id="botoes-container">
@@ -119,6 +118,16 @@
             <button id="btn-dica">Ver Dica</button>
             <p id="dica"></p>
         </section>
+
+        <section class="secao">
+            <h2>🛡️ Canal de Ajuda</h2>
+            <form id="ajudaForm">
+                <label for="linkSuspeito">Vi um link suspeito, o que fazer?</label>
+                <input type="text" id="linkSuspeito" placeholder="Cole o link ou texto suspeito aqui" required>
+                <button type="submit">Avaliar</button>
+            </form>
+            <p id="respostaAjuda"></p>
+        </section>
         
     </main>
 
@@ -126,6 +135,6 @@
         <p>&copy; 2026 - Portal de Conscientização Digital</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
