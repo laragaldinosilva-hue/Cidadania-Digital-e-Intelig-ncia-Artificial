@@ -1,4 +1,4 @@
-// Banco de dados do Quiz (Sua pergunta original + 3 novas)
+// Banco de dados do Quiz
 const perguntas = [
     {
         texto: "As Deepfakes são sempre fáceis de identificar visualmente?",
@@ -8,7 +8,7 @@ const perguntas = [
         ],
         dica: "Dica: Olhe sempre para os olhos e o movimento da boca em vídeos suspeitos!"
     },
-    { 
+    {  
         texto: "Se você receber um áudio de um familiar pedindo dinheiro urgente com voz idêntica, o que deve fazer?",
         opcoes: [
             { texto: "Fazer o PIX imediatamente para ajudar", correta: false },
@@ -39,7 +39,6 @@ let perguntaAtual = 0;
 
 // Função para renderizar a pergunta na tela
 function carregarPergunta() {
-    // Se as perguntas acabarem, mostra o resultado final
     if (perguntaAtual >= perguntas.length) {
         document.getElementById("pergunta-texto").textContent = "🏆 Quiz Concluído!";
         document.getElementById("botoes-container").innerHTML = "<p>Parabéns por completar o teste de cidadania digital!</p>";
@@ -50,27 +49,22 @@ function carregarPergunta() {
 
     const dados = perguntas[perguntaAtual];
     
-    // Atualiza o texto da pergunta e limpa a dica/resultado anterior
     document.getElementById("pergunta-texto").textContent = `${perguntaAtual + 1}. ${dados.texto}`;
     document.getElementById("resultado").textContent = "";
     document.getElementById("dica").textContent = "";
 
-    // Configura os botões com as novas opções
     const btn1 = document.getElementById("btn-opcao1");
     const btn2 = document.getElementById("btn-opcao2");
 
     btn1.textContent = dados.opcoes[0].texto;
     btn2.textContent = dados.opcoes[1].texto;
 
-    // Remove eventos antigos para não duplicar cliques
     btn1.onclick = null;
     btn2.onclick = null;
 
-    // Atribui a função de checar a resposta
     btn1.onclick = () => verificarResposta(dados.opcoes[0].correta);
     btn2.onclick = () => verificarResposta(dados.opcoes[1].correta);
 
-    // Configura o botão de dica correspondente à pergunta
     document.getElementById("btn-dica").onclick = () => {
         document.getElementById("dica").textContent = dados.dica;
     };
@@ -89,32 +83,17 @@ function verificarResposta(correta) {
         resultado.style.color = "red";
     }
 
-    // Atualiza o placar na tela
     document.getElementById("placar").textContent = "Pontos: " + pontos;
 
-    // Bloqueia cliques rápidos para dar tempo de ler o resultado antes de passar
     perguntaAtual++;
-    setTimeout(carregarPergunta, 1500); // Avança após 1.5 segundos
+    setTimeout(carregarPergunta, 1500);
 }
 
-// Inicializa o quiz assim que a página carrega
+// Inicializa o quiz
 carregarPergunta();
-
-
-/* ===================================================
-   MANTENHA O RESTANTE DO SEU CÓDIGO (MODO ESCURO E FORMULÁRIO) ABAIXO:
-   =================================================== */
 
 // Modo escuro
 const temaBtn = document.getElementById("temaBtn");
 temaBtn.addEventListener("click", function(){
     document.body.classList.toggle("dark");
-});
-
-// Formulário
-const formulario = document.getElementById("pesquisaForm");
-formulario.addEventListener("submit", function(event){
-    event.preventDefault();
-    const nome = document.getElementById("nome").value;
-    document.getElementById("mensagem").textContent = "Obrigado pela participação, " + nome + "!";
 });
