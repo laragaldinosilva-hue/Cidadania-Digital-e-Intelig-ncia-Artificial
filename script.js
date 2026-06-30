@@ -8,7 +8,7 @@ const perguntas = [
         ],
         dica: "Dica: Olhe sempre para os olhos e o movimento da boca em vídeos suspeitos!"
     },
-    {
+    { 
         texto: "Se você receber um áudio de um familiar pedindo dinheiro urgente com voz idêntica, o que deve fazer?",
         opcoes: [
             { texto: "Fazer o PIX imediatamente para ajudar", correta: false },
