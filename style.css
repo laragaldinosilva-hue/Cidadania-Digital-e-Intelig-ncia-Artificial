@@ -1,143 +1,192 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#f4f4f4;
-    color:#333;
-    line-height:1.6;
+/* Variáveis com a paleta Verde-Água Claro e Escuro para contraste */
+:root {
+    --verde-agua-claro: #e6f7f4;
+    --verde-agua-principal: #14b8a6;
+    --verde-agua-escuro: #0f766e;
+    --fundo-escuro: #111827;
+    --card-escuro: #1f2937;
 }
 
-header{
-    background:#0f172a;
-    color:white;
-    text-align:center;
-    padding:40px;
+body {
+    font-family: Arial, sans-serif;
+    background: var(--verde-agua-claro);
+    color: #333;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
 }
 
-#temaBtn{
-    margin-top:15px;
+header {
+    background: var(--verde-agua-escuro);
+    color: white;
+    text-align: center;
+    padding: 40px;
 }
 
-nav{
-    background:#2563eb;
+#temaBtn {
+    margin-top: 15px;
+    background: #ffffff;
+    color: var(--verde-agua-escuro);
+    font-weight: bold;
 }
 
-nav ul{
-    display:flex;
-    justify-content:center;
-    list-style:none;
+#temaBtn:hover {
+    background: #f0f0f0;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    padding:15px;
-    display:block;
+nav {
+    background: var(--verde-agua-principal);
 }
 
-nav a:hover{
-    background:#1d4ed8;
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
-main{
-    padding:20px;
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    font-weight: bold;
 }
 
-section{
-    background:white;
-    margin:20px 0;
-    padding:20px;
-    border-radius:10px;
+nav a:hover {
+    background: var(--verde-agua-escuro);
 }
 
-.cards{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.card{
-    flex:1;
-    min-width:250px;
-    background:#e2e8f0;
-    padding:20px;
-    border-radius:10px;
-    transition:0.3s;
+section {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-.card:hover{
-    transform:translateY(-5px);
+h2 {
+    color: var(--verde-agua-escuro);
+    margin-bottom: 15px;
 }
 
-button{
-    background:#2563eb;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    border-radius:5px;
-    cursor:pointer;
-    margin:5px;
-    transition:0.3s;
+/* Configuração para as imagens ficarem responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+    display: block;
 }
 
-button:hover{
-    background:#1d4ed8;
-    transform:scale(1.05);
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-form{
-    display:flex;
-    flex-direction:column;
+.card {
+    flex: 1;
+    min-width: 250px;
+    background: #f0fdfa; /* Verde água bem suave para os cards */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccfbf1;
+    transition: 0.3s;
 }
 
-input,
-textarea{
-    padding:10px;
-    margin-bottom:10px;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(20, 184, 166, 0.2);
 }
 
-footer{
-    text-align:center;
-    background:#0f172a;
-    color:white;
-    padding:20px;
+button {
+    background: var(--verde-agua-principal);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.dark{
-    background:#111827;
-    color:white;
+button:hover {
+    background: var(--verde-agua-escuro);
+    transform: scale(1.05);
 }
 
-.dark section{
-    background:#1f2937;
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
 }
 
-.dark .card{
-    background:#374151;
+input, textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.checklist div {
+    margin: 8px 0;
+    padding: 5px;
+    background: #f0fdfa;
+    border-left: 4px solid var(--verde-agua-principal);
+    padding-left: 10px;
+}
+
+footer {
+    text-align: center;
+    background: var(--verde-agua-escuro);
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Modo Escuro (Ajustado para combinar com a paleta) */
+.dark {
+    background: var(--fundo-escuro);
+    color: #f3f4f6;
+}
+
+.dark section {
+    background: var(--card-escuro);
+}
+
+.dark h2 {
+    color: #2dd4bf; /* Verde água brilhante no modo escuro */
+}
+
+.dark .card {
+    background: #374151;
+    border-color: #4b5563;
+}
+
+.dark .checklist div {
+    background: #374151;
+    color: white;
 }
 
 @media(max-width:768px){
-
-    nav ul{
-        flex-direction:column;
-        align-items:center;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
-
-    .cards{
-        flex-direction:column;
+    .cards {
+        flex-direction: column;
     }
-
-}
-:root{
-    --roxo-escuro:#4c1d95;
-    --roxo:#7c3aed;
-    --lilas:#a855f7;
-    --rosa-lilas:#c084fc;
-    --claro:#f5f3ff;
-    --branco:#ffffff;
-    --texto:#1f2937;
 }
