@@ -1,5 +1,5 @@
 // Banco de dados de perguntas do Quiz (Subcategoria A e D)
-const perguntas = [
+const perguntas = [ 
     {
         texto: "As Deepfakes são sempre fáceis de identificar visualmente?",
         opcoes: [
