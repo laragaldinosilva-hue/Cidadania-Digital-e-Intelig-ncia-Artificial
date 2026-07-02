@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 
-/* Variáveis com a paleta Verde-Água Claro e Escuro para contraste */
 :root {
-    --verde-agua-claro: #e6f7f4;
-    --verde-agua-principal: #14b8a6;
-    --verde-agua-escuro: #0f766e;
+    --verde-agua-claro: #f2fffd;
+    --verde-agua-principal: #9adfd9;
+    --verde-agua-escuro: #6fc9c0;
     --fundo-escuro: #111827;
     --card-escuro: #1f2937;
+}
 }
 
 body {
