@@ -4,13 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 :root {
-    --verde-agua-claro: #f2fffd;
-    --verde-agua-principal: #9adfd9;
-    --verde-agua-escuro: #6fc9c0;
+    --verde-agua-claro: #f6fffe;
+    --verde-agua-principal: #a8ddd6;
+    --verde-agua-escuro: #6fbdb4;
     --fundo-escuro: #111827;
     --card-escuro: #1f2937;
+}
 }
 
 body {
