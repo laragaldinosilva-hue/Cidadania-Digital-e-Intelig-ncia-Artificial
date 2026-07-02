@@ -1,3 +1,4 @@
+```css
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +11,6 @@
     --verde-agua-escuro: #6fc9c0;
     --fundo-escuro: #111827;
     --card-escuro: #1f2937;
-}
 }
 
 body {
@@ -30,7 +30,7 @@ header {
 
 #temaBtn {
     margin-top: 15px;
-    background: #ffffff;
+    background: white;
     color: var(--verde-agua-escuro);
     font-weight: bold;
 }
@@ -68,10 +68,10 @@ main {
 }
 
 section {
-    background: white;
+    background: #e6f7f4;
     margin: 20px 0;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
@@ -80,7 +80,6 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Configuração para as imagens ficarem responsivas */
 img {
     max-width: 100%;
     height: auto;
@@ -99,10 +98,10 @@ img {
 .card {
     flex: 1;
     min-width: 250px;
-    background: #f0fdfa; /* Verde água bem suave para os cards */
+    background: #f7fffe;
     padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #ccfbf1;
+    border-radius: 15px;
+    border: 1px solid #d7f4ef;
     transition: 0.3s;
 }
 
@@ -116,7 +115,7 @@ button {
     color: white;
     border: none;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     margin: 5px;
     font-weight: bold;
@@ -134,19 +133,20 @@ form {
     max-width: 400px;
 }
 
-input, textarea {
+input,
+textarea {
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #cdeee8;
+    border-radius: 10px;
 }
 
 .checklist div {
     margin: 8px 0;
-    padding: 5px;
-    background: #f0fdfa;
+    padding: 10px;
+    background: #f7fffe;
     border-left: 4px solid var(--verde-agua-principal);
-    padding-left: 10px;
+    border-radius: 8px;
 }
 
 footer {
@@ -157,7 +157,6 @@ footer {
     margin-top: 40px;
 }
 
-/* Modo Escuro (Ajustado para combinar com a paleta) */
 .dark {
     background: var(--fundo-escuro);
     color: #f3f4f6;
@@ -168,7 +167,7 @@ footer {
 }
 
 .dark h2 {
-    color: #2dd4bf; /* Verde água brilhante no modo escuro */
+    color: #9adfd9;
 }
 
 .dark .card {
@@ -181,12 +180,14 @@ footer {
     color: white;
 }
 
-@media(max-width:768px){
+@media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: center;
     }
+
     .cards {
         flex-direction: column;
     }
 }
+```
