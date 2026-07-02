@@ -1,16 +1,15 @@
-```css
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --verde-agua-claro: #b4dbc4;
     --verde-agua-principal: #8bc4a3;
     --verde-agua-escuro: #417857;
     --fundo-escuro: #224034;
     --card-escuro: #163629;
-}
 }
 
 body {
@@ -67,6 +66,7 @@ main {
     margin: 0 auto;
 }
 
+/* 🔥 FIX PRINCIPAL */
 section {
     background: #e6f7f4;
     margin: 20px 0;
@@ -78,14 +78,6 @@ section {
 h2 {
     color: var(--verde-agua-escuro);
     margin-bottom: 15px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 15px 0;
-    display: block;
 }
 
 .cards {
@@ -105,11 +97,7 @@ img {
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(20, 184, 166, 0.2);
-}
-
+/* BOTÕES */
 button {
     background: var(--verde-agua-principal);
     color: white;
@@ -141,6 +129,7 @@ textarea {
     border-radius: 10px;
 }
 
+/* LISTA */
 .checklist div {
     margin: 8px 0;
     padding: 10px;
@@ -157,6 +146,7 @@ footer {
     margin-top: 40px;
 }
 
+/* 🌙 MODO ESCURO CORRIGIDO */
 .dark {
     background: var(--fundo-escuro);
     color: #f3f4f6;
@@ -164,20 +154,37 @@ footer {
 
 .dark section {
     background: var(--card-escuro);
-}
-
-.dark h2 {
-    color: #9adfd9;
+    color: #f3f4f6;
 }
 
 .dark .card {
-    background: #374151;
-    border-color: #4b5563;
+    background: #1f3d33;
+    border-color: #2d5a4a;
+    color: #f3f4f6;
 }
 
 .dark .checklist div {
-    background: #374151;
-    color: white;
+    background: #1f3d33;
+    color: #f3f4f6;
+}
+
+.dark input,
+.dark textarea {
+    background: #1f3d33;
+    color: #f3f4f6;
+    border: 1px solid #2d5a4a;
+}
+
+.dark nav {
+    background: #1b3a2f;
+}
+
+.dark header {
+    background: #163629;
+}
+
+.dark footer {
+    background: #163629;
 }
 
 @media (max-width: 768px) {
@@ -190,4 +197,3 @@ footer {
         flex-direction: column;
     }
 }
-```
